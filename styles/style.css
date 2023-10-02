@@ -7,23 +7,23 @@ body {
 
 @font-face {
   font-family: "SSTUltraLight";
-  src: url(/fonts/SSTUltraLight.ttf);
+  src: url(../fonts/SSTUltraLight.ttf);
   font-weight: 400;
 }
 
 @font-face {
   font-family: "SSTLight";
-  src: url(/fonts/SSTLight.ttf);
+  src: url(../fonts/SSTLight.ttf);
 }
 
 @font-face {
   font-family: "SST";
-  src: url(/fonts/SSTRg.ttf);
+  src: url(../fonts/SSTRg.ttf);
 }
 
 @font-face {
   font-family: "SSTMedium";
-  src: url(/fonts/SSTMedium.ttf);
+  src: url(../fonts/SSTMedium.ttf);
 }
 
 /******************************************************************/

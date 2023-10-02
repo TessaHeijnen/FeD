@@ -27,6 +27,7 @@ console.log("hi");
 
 
 // PLAYSTATION SHARE BUTTONS PREV + NEXT // // PLAYSTATION SHARE BUTTONS PREV + NEXT // // PLAYSTATION SHARE BUTTONS PREV + NEXT // 
+document.addEventListener("DOMContentLoaded", function() {
 var sliderCounter = 1; //houd bij welke dia zichtbaar is
 var totalSlides = 7; // Pas dit aan aan het werkelijke aantal dia's
 var nextButton = document.getElementById("nextBtn"); //volgende button
@@ -54,7 +55,7 @@ prevButton.addEventListener("click", function() {
 });
 
 manageButtons();
-
+});
   
   // FOOTER //  // FOOTER //  // FOOTER //  // FOOTER //  // FOOTER //  // FOOTER //  // FOOTER //
    
