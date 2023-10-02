@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.9.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 137 136.9" style="enable-background:new 0 0 137 136.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:rgba(57, 57, 57, 1) ;stroke-width:11;stroke-miterlimit:10;}
+	.st1{fill:rgba(57, 57, 57, 1)}
+
+
+
+#camera {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 450;
+}
+
+#camera:hover {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 0;
+    animation: camera-hover 1s linear;
+    fill: blue;
+}
+
+@keyframes camera {
+    from {
+        stroke-dashoffset: 450;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes camera-hover {
+    0% {
+        stroke-dashoffset: 450;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+</style>
+<g id="camera">
+	<path class="st0" d="M68.5,131.4c-9.6-0.1-19.1,0.2-28.7-0.6c-10.5-0.8-19.7-4.4-26.3-13c-4.7-6.1-6.9-13.2-7.2-20.7
+		c-0.9-19-1-38.1,0-57.1c0.6-11.5,5-21.3,14.9-27.9C26.7,8.4,33,6.6,39.5,6.3c19.3-1,38.6-1.1,58,0c11.5,0.6,21.2,5.2,27.7,15.3
+		c3.5,5.4,5.2,11.5,5.5,17.8c1,19.4,1.1,38.9,0,58.3c-0.7,11.3-5.2,20.8-15,27.3c-5.7,3.8-12.2,5.3-19,5.8
+		C87.4,131.5,77.9,131.2,68.5,131.4z"/>
+</g>
+<g id="littleCircle">
+	<path class="st0" d="M68.5,97.5c16.1-0.1,29-13.2,28.9-29.2c-0.1-15.9-13.3-28.9-29.3-28.8c-15.7,0.1-28.8,13.3-28.7,29.2
+		C39.6,84.5,52.8,97.6,68.5,97.5z"/>
+</g>
+<g id="lens">
+	<path class="st1" d="M105,40.1c-4.5,0.1-8-3.4-8.1-7.9c-0.1-4.4,3.4-8.1,7.8-8.2c4.4-0.1,8.2,3.6,8.3,8
+		C113,36.4,109.4,40.1,105,40.1z"/>
+</g>
+</svg>
+
+
+

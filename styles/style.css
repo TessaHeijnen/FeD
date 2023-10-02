@@ -1,0 +1,1457 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: var(--White-Color);
+}
+
+@font-face {
+  font-family: "SSTUltraLight";
+  src: url(/fonts/SSTUltraLight.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SSTLight";
+  src: url(/fonts/SSTLight.ttf);
+}
+
+@font-face {
+  font-family: "SST";
+  src: url(/fonts/SSTRg.ttf);
+}
+
+@font-face {
+  font-family: "SSTMedium";
+  src: url(/fonts/SSTMedium.ttf);
+}
+
+/******************************************************************/
+/* CUSTOM PROPERTIES 
+/******************************************************************/
+
+.startscherm a,
+.DezeMaand a,
+.PlaystationStore a,
+.Clothing a {
+  font-family: var(--SSTMedium-font-family);
+  font-size: var(--button-font-size);
+  background-color: var(--White-Color);
+  color: var(--Black-Color);
+  padding: var(--button-padding);
+  margin-top: 1em;
+  margin-bottom: 2em;
+
+  display: inline-block;
+  border-radius: var(--RoundCornersButton-border-radius);
+  text-decoration: var(--NoLine-text-decoration);
+
+  /* outline: 2px solid #26254f; */
+  /* Voeg wat ruimte tussen de a en de border toe */
+  outline-offset: var(--SpaceBetweenButtonAndBorder-outline-offset);
+  transition: var(--SmoothHoverButton-transition);
+}
+
+:root {
+  --SSTUltralight-font-family: "SSTUltraLight";
+  --SSTLight-font-family: "SSTLight";
+  --SST-font-family: "SST";
+  --SSTMedium-font-family: "SSTMedium";
+
+  --h2-font-size: 1.7em;
+  --MiniP-font-size: 0.9em;
+
+  --button-font-size: 0.9em;
+  --letterspace-letter-spacing: 0.07rem;
+  --NoLine-text-decoration: none;
+
+  --White-Color-light: rgba(255, 255, 255, 1);
+  --lightWhite-Color-light: rgba(246, 247, 248, 1);
+  --DarkWhite-Color-light: rgba(229, 229, 229, 1);
+  --Blue-Color-light: rgba(0, 112, 204, 1);
+  --darkblue-Color-light: rgba(0, 67, 165, 1);
+  --Black-Color-light: rgba(18, 19, 20, 1);
+  --blackopacity-light: rgba(0, 0, 0, 0.2);
+  --lightblack-color-light: rgba(31, 31, 31, 1);
+  --Grey-Color-light: rgba(206, 205, 210, 1);
+  --DarkGrey-Color-light: rgba(107, 107, 107, 1);
+  --Orange-Color-light: rgba(213, 59, 0, 1);
+  --DarkOrange-Color-light: rgba(192, 53, 0, 1);
+  --purple-Color-light: rgb(36, 35, 60);
+
+  --White-Color-dark: rgba(18, 19, 20, 1);
+  --lightWhite-Color-dark: rgba(18, 19, 20, 1);
+  --DarkWhite-Color-dark: rgba(18, 19, 20, 1);
+  --Blue-Color-dark: rgba(0, 112, 204, 1);
+  --darkblue-Color-dark: rgba(0, 67, 165, 1);
+  --Black-Color-dark: rgba(246, 247, 248, 1);
+  --blackopacity-dark: rgba(255, 255, 255, 1);
+  --lightblack-color-dark: rgba(206, 205, 210, 1);
+  --Grey-Color-dark: rgba(107, 107, 107, 1);
+  --DarkGrey-Color-dark: rgba(206, 205, 210, 1);
+  --Orange-Color-dark: rgba(213, 59, 0, 1);
+  --DarkOrange-Color-dark: rgba(192, 53, 0, 1);
+  --purple-Color-dark: rgba(246, 247, 248, 1);
+
+  --SideSpace-padding: 1.5em;
+  --button-padding: 0.4em 1em 0.6em 1em;
+  --LineHeight-line-height: 1.4em;
+  --BigImg-border-radius: 0.8em;
+
+  --RoundCornersButton-border-radius: 10em;
+  --BorderButtonOrange-outline: 2px solid rgba(192, 53, 0, 1);
+  --BorderButtonWhite-outline: 2px solid rgba(255, 255, 255, 1);
+  --SpaceBetweenButtonAndBorder-outline-offset: 2px;
+  --SmoothHoverButton-transition: 0.1s ease-in-out;
+}
+
+/******************************************************************/
+/* DARKMODE */ /* DARKMODE */ /* DARKMODE */ /* DARKMODE */ /* DARKMODE */
+/******************************************************************/
+
+/* bron: https://www.youtube.com/watch?v=6YrOGKmGTCY */
+
+/* @media (prefers-color-scheme: dark) {
+	:root{ */
+
+html[data-theme="dark"] {
+  --White-Color: var(--White-Color-dark);
+  --lightWhite-Color: var(--lightWhite-Color-dark);
+  --DarkWhite-Color: var(--DarkWhite-Color-dark);
+  --Blue-Color: var(--Blue-Color-dark);
+  --darkblue-Color: var(--darkblue-Color-dark);
+  --Black-Color: var(--Black-Color-dark);
+  --blackopacity: var(--blackopacity-dark);
+  --lightblack-color: var(--lightblack-color-dark);
+  --Grey-Color: var(--Grey-Color-dark);
+  --DarkGrey-Color: var(--DarkGrey-Color-dark);
+  --Orange-Color: var(--Orange-Color-dark);
+  --DarkOrange-Color: var(--DarkOrange-Color-dark);
+  --purple-Color: var(--purple-Color-dark);
+}
+
+/* @media (prefers-color-scheme: light) {
+	:root{ */
+html[data-theme="light"] {
+  --White-Color: var(--White-Color-light);
+  --lightWhite-Color: var(--lightWhite-Color-light);
+  --DarkWhite-Color: var(--DarkWhite-Color-light);
+  --Blue-Color: var(--Blue-Color-light);
+  --darkblue-Color: var(--darkblue-Color-light);
+  --Black-Color: var(--Black-Color-light);
+  --blackopacity: var(--blackopacity-light);
+  --lightblack-color: var(--lightblack-color-light);
+  --Grey-Color: var(--Grey-Color-light);
+  --DarkGrey-Color: var(--DarkGrey-Color-light);
+  --Orange-Color: var(--Orange-Color-light);
+  --DarkOrange-Color: var(--DarkOrange-Color-light);
+  --purple-Color: var(--purple-Color-light);
+}
+
+/* Dark mode button */
+header button:nth-of-type(4) {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  left: 0.5em;
+  bottom: -4vh;
+
+  background-color: var(--Blue-Color);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  z-index: -2;
+  overflow: hidden;
+}
+
+/* Bron: https://www.youtube.com/watch?v=OnQjkkQhKQg*/
+/* Sun */
+#sun {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+  border: solid 0.1em var(--Blue-Color);
+
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;
+}
+
+/* Streepjes sun */
+#sun span {
+  height: 0.2em;
+  width: 1.6em;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  z-index: -1;
+  transition: width 0.5s;
+}
+
+/* Streepje 01 */
+#sun span:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+/* Streepje 02 */
+#sun span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+/* Streepje 03 */
+#sun span:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+/* Streepje 04 */
+#sun span:nth-child(4) {
+  transform: rotate(-45deg);
+}
+
+/* Moon */
+#sun::after {
+  content: "";
+  position: absolute;
+  width: 1.55em;
+  height: 1.5em;
+
+  background-color: var(--Blue-Color);
+  border-radius: 50%;
+  transition: 0.5s;
+
+  bottom: 2em;
+  left: 2em;
+}
+
+/* Moon */
+#sun.night::after {
+  bottom: 0.3em;
+  left: 0.3em;
+}
+
+/* Streepjes krijgen width dus klappen in */
+#sun.night span {
+  width: 0;
+}
+
+/******************************************************************/
+/* LOADER */
+/******************************************************************/
+
+/* Blauwe vlak */
+.loader {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkblue-Color);
+  height: 100vh; /* 100% van de viewport hoogte */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+/* alle vormen */
+.loader img {
+  width: 4em;
+  transform: scale(0) rotate(180deg);
+  animation: loading 2s ease infinite;
+  opacity: 0;
+}
+
+/*Bron: https://codepen.io/stphnnnn/pen/BPboyN?editors=1100 * delay, keyframes */
+.loader img:nth-child(1) {
+  animation-delay: 0s;
+}
+.loader img:nth-child(2) {
+  animation-delay: 0.5s;
+} 
+.loader img:nth-child(3) {
+  animation-delay: 1s;
+} 
+.loader img:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    transform: scale(0) rotateZ(-90deg);
+    opacity: 0;
+  }
+  45% {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+  }
+
+  /* 50% {
+	  transform: scale(0) rotateZ(0deg);
+	  opacity: 1;
+	} */
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 2s ease-out;
+}
+
+.loaderhidden {
+  display: none;
+}
+
+/******************************************************************/
+/* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */
+/******************************************************************/
+
+header {
+  background-color: var(--White-Color);
+  display: flex;
+  align-items: center;
+  
+  padding: 0.8em 0;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+/* Hamburger icoon */
+header button:first-of-type {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-left: 1em;
+}
+
+/* Hamburger icoon */
+header button:first-of-type img {
+  height: 1.2em;
+}
+
+/* Vergrootglas icoon */
+header button:nth-of-type(2) {
+  background: transparent;
+  border: none;
+  padding: 0em;
+  margin-left: 2em;
+}
+
+/* Vergrootglas icoon + hamburger */
+header button:nth-of-type(2) img {
+  height: 1.3em;
+}
+
+/* Playstation logo main icoon */
+header > img {
+  height: 2em;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Aanmelden button */
+header button:nth-of-type(3) {
+  height: 1.6em;
+  margin-right: 1em;
+  color: var(--White-Color);
+  background-color: var(--Blue-Color);
+  border: none;
+  border-radius: 1em;
+
+  font-family: var(--SST-font-family);
+  font-size: 0.9em;
+
+  letter-spacing: var(--letterspace-letter-spacing);
+}
+
+/******************************************************************/
+/* STARTSCHERM */ /* STARTSCHERM */ /* STARTSCHERM */ /* STARTSCHERM */ /*
+/******************************************************************/
+
+h1 {
+  display: none;
+}
+
+.startscherm {
+  padding-top: 3.6em;
+  display: grid;
+  grid-template-rows: 1fr 10em;
+}
+
+.startscherm > h2 {
+  display: none;
+}
+
+/* Slider */ /* Slider */ /* Slider */ /* Slider */ /* Slider */ /* Slider */ /* Slider */
+.startscherm ul:first-of-type {
+  list-style: none;
+  padding-left: 0;
+
+  display: flex; /* plaatjes naast elkaar */
+  overflow-x: scroll;
+  margin-left: -6.2em;
+  margin-top: 0.2em;
+  margin-bottom: 0;
+
+  height: 8.2em;
+  grid-row-start: 2;
+  scroll-snap-type: x mandatory;
+}
+
+/* List item */
+.startscherm ul:first-of-type li {
+  overflow-y: hidden;
+  flex: 0 0 14em; /* breedte van de img */
+
+  margin: 0 0.8em; /* gap between */
+  margin-left: 0; /* zonder dit wordt de gap groter  */
+
+  scroll-snap-align: start;
+}
+
+/* cover img */
+.startscherm ul:first-of-type li img:first-of-type {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  border-radius: 0.7em;
+}
+
+/* grote afbeeldingen */ /* grote afbeeldingen */ /* grote afbeeldingen */ /* grote afbeeldingen */
+/* grote afbeeldingen */ /* grote afbeeldingen */ /* grote afbeeldingen */ /* grote afbeeldingen */
+/* grote afbeeldingen */ /* grote afbeeldingen */ /* grote afbeeldingen */ /* grote afbeeldingen */
+
+/* Img big List */
+.startscherm ul:nth-of-type(2) {
+  list-style: none;
+
+  height: 42.5em;
+  padding: 0;
+  margin-top: 0;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/* Img big List-item */
+.startscherm ul:nth-of-type(2) li {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 5;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 20em 6em max-content max-content auto auto;
+
+  position: relative; /* hiermee kan een absolute op de span(bg): waardoor de hoogte van een row de tekst pakt en niet de span */
+  height: 100%;
+
+  transition: display 0.5s ease-in-out;
+}
+
+/* .startscherm ul:nth-of-type(2) li img{
+	grid-row: 5;
+} */
+
+/* Img big + video */
+/* img:first-of-type is nodig om de video te selecteren ondanks dat spidey logo img is */
+.startscherm ul:nth-of-type(2) .video img:first-of-type,
+.startscherm ul:nth-of-type(2) li video,
+.startscherm ul:nth-of-type(2) li:nth-of-type(3) img,
+.startscherm ul:nth-of-type(2) li:nth-of-type(4) img,
+.startscherm ul:nth-of-type(2) li:nth-of-type(5) img {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 5;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* Alles op !important ivm overschrijven van code */
+/* Logo inside big img */
+.startscherm ul:nth-of-type(2) .video img,
+.startscherm ul:nth-of-type(2) li:nth-of-type(2) img:nth-of-type(2),
+.startscherm ul:nth-of-type(2) li:nth-of-type(3) img:nth-of-type(2),
+.startscherm ul:nth-of-type(2) li:nth-of-type(4) img:nth-of-type(2) {
+  height: 2.5em !important;
+  width: auto !important;
+  grid-row: 3 !important;
+  justify-self: center;
+  z-index: 4;
+}
+
+.startscherm ul:nth-of-type(2) li:nth-of-type(4) img:nth-of-type(2) {
+  height: 4em !important;
+}
+
+/* alle tekst centreren */
+.startscherm ul:nth-of-type(2) li h2,
+.startscherm ul:nth-of-type(2) li p,
+.startscherm ul:nth-of-type(2) li a {
+  color: var(--White-Color);
+  align-self: center;
+  text-align: center;
+}
+
+/* title in big img */
+.startscherm ul:nth-of-type(2) li h2 {
+  font-family: var(--SSTUltralight-font-family);
+  font-size: 1.4em;
+
+  grid-column-start: 1;
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+  line-height: 1;
+  z-index: 2;
+
+  margin-top: 1em;
+  margin-bottom: 0.8em;
+  padding-left: 0;
+}
+
+/* p in big img */
+.startscherm ul:nth-of-type(2) li p {
+  font-family: var(--SSTLight-font-family);
+  font-size: 0.9em;
+  line-height: 1.55em;
+  letter-spacing: 0.02em;
+
+  grid-column-start: 1;
+  grid-row-start: 5;
+
+  z-index: 2;
+  width: 85%;
+  justify-self: center;
+  margin: 0;
+  margin-bottom: 0.5em;
+  padding-left: 0;
+}
+
+/* button in big img */ /* button in big img */ /* button in big img */ /* button in big img */ /* button in big img */
+/* button in big img */ /* button in big img */ /* button in big img */ /* button in big img */ /* button in big img */
+
+/* ORANGE button ////////////////////////////////////////////////*/
+/* 01 Spiderman / 05 PS Portal button2 */
+.startscherm ul:nth-of-type(2) li a:first-of-type,
+.startscherm ul:nth-of-type(2) li:nth-of-type(2) a:first-of-type {
+  grid-row: 6;
+  z-index: 2;
+  place-self: center;
+  color: white;
+  background-color: var(--Orange-Color);
+  outline: 2px solid var(--lightblack-color);
+}
+
+/* HOVER / 01 Spiderman / 05 PS Portal button2 */
+.startscherm ul:nth-of-type(2) li a:first-of-type:hover {
+  background-color: var(--DarkOrange-Color);
+  outline: 2px solid var(--DarkOrange-Color);
+}
+
+/* WHITE button ////////////////////////////////////////////////*/
+/* 02 FC24 / 03 Cyberpunk / 04 Helldivers */
+.startscherm ul:nth-of-type(2) li:nth-of-type(2) a:first-of-type,
+.startscherm ul:nth-of-type(2) li:nth-of-type(3) a:first-of-type,
+.startscherm ul:nth-of-type(2) li:nth-of-type(4) a:first-of-type,
+.startscherm ul:nth-of-type(2) li:nth-of-type(5) a:nth-of-type(2) {
+  color: var(--Black-Color);
+  background-color: var(--White-Color);
+  outline: 2px solid var(--Black-Color);
+}
+
+/* 03 Cyberpunk andere kleur ivm bg */
+.startscherm ul:nth-of-type(2) li:nth-of-type(3) a:first-of-type {
+  outline: 2px solid rgba(232, 18, 42, 1);
+}
+
+/* 04 HellDivers andere kleur bg / 05 PS Portal button1 */
+.startscherm ul:nth-of-type(2) li:nth-of-type(4) a:first-of-type,
+.startscherm ul:nth-of-type(2) li:nth-of-type(5) a:nth-of-type(2) {
+  outline: 2px solid var(--lightblack-color);
+}
+
+/* HOVER / 02 FC24 / 03 Cyberpunk / 04 Helldivers */
+.startscherm ul:nth-of-type(2) li:nth-of-type(2) a:first-of-type:hover,
+.startscherm ul:nth-of-type(2) li:nth-of-type(3) a:first-of-type:hover,
+.startscherm ul:nth-of-type(2) li:nth-of-type(4) a:first-of-type:hover,
+.startscherm ul:nth-of-type(2) li:nth-of-type(5) a:nth-of-type(2):hover {
+  background-color: var(--DarkWhite-Color);
+  outline: 2px solid var(--DarkWhite-Color);
+}
+
+/* 2x buttons samen PS PORTAL */
+.startscherm ul:nth-of-type(2) li article {
+  z-index: 2;
+  place-self: center;
+  display: flex;
+  gap: 1em;
+}
+
+/* Gradient in big img */ /* Gradient in big img */ /* Gradient in big img */ /* Gradient in big img */ /* Gradient in big img */
+/* Gradient in big img */ /* Gradient in big img */ /* Gradient in big img */ /* Gradient in big img */ /* Gradient in big img */
+
+/* Gradient overflow algemeen  */
+.startscherm span {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* black background algemeen */
+.startscherm span:nth-of-type(2),
+.startscherm li:nth-of-type(2) span:nth-of-type(2) {
+  grid-row-start: 4;
+  grid-row-end: 7;
+  grid-column-start: 1;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: var(--lightblack-color);
+  position: absolute;
+}
+
+/* Spiderman ////////////////////////////////////////////////*
+/* Spiderman gradient overflow  */
+.startscherm span:first-of-type {
+  background: linear-gradient(transparent, var(--lightblack-color));
+}
+
+/* FC24 ////////////////////////////////////////////////*
+/* FC24 gradient overflow  */
+.startscherm li:nth-of-type(2) span:first-of-type {
+  background: linear-gradient(transparent, var(--Black-Color));
+  grid-row-start: 2;
+  grid-row-end: 5;
+  z-index: 1;
+}
+
+/* FC24 background  */
+.startscherm li:nth-of-type(2) span:nth-of-type(2) {
+  background-color: var(--Black-Color);
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+/* Cyberpunk ////////////////////////////////////////////////*
+/* Cyberpunk gradient overflow  */
+.startscherm li:nth-of-type(3) span:first-of-type {
+  background: linear-gradient(transparent, rgba(232, 18, 42, 1));
+}
+
+/* Cyberpunk background */
+.startscherm li:nth-of-type(3) span:nth-of-type(2) {
+  background-color: rgba(232, 18, 42, 1);
+}
+
+/******************************************************************/
+/* GAME GALLERY */ /* GAME GALLERY */ /* GAME GALLERY */ /* GAME GALLERY */
+/******************************************************************/
+
+/*/ TEKST */
+.GameGallery h2 {
+  font-family: var(--SSTUltralight-font-family);
+  font-size: var(--h2-font-size);
+
+  line-height: var(--LineHeight-line-height);
+  text-align: center;
+
+  padding-top: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15em;
+  color: var(--White-Color);
+
+  padding-left: 0;
+}
+
+/**************/
+/*/ BUTTONS */
+/*************/
+
+/* vlak onder buttons */
+.GameGallery article {
+  background-color: var(--lightblack-color);
+  border-radius: 20em;
+  display: inline-block;
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+/* beide buttons */
+.GameGallery article button {
+  height: 3.5em;
+  padding: 0 1.6em;
+  margin: 0;
+  font-family: var(--SST-font-family);
+  font-weight: 700;
+
+  color: var(--White-Color);
+  background-color: var(--Blue-Color);
+  border: none;
+  border-radius: 20em;
+  font-size: 0.75em;
+}
+
+/* 01 buttons */
+.GameGallery article button:first-of-type {
+  background-color: var(--White-Color);
+  color: var(--Black-Color);
+}
+
+/* 02 buttons */
+.GameGallery article button:last-of-type {
+  background-color: var(--lightblack-color);
+  color: var(--White-Color);
+}
+
+/**************/
+/*/ GRID IMG*/
+/*************/
+
+.GameGallery {
+  background-color: var(--Black-Color);
+}
+
+.GameGallery ul {
+  display: grid;
+  margin-bottom: 0;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.5em;
+  gap: 0.8em;
+  list-style: none;
+}
+
+/* list item met img, icon, p */
+.GameGallery ul li {
+  padding-bottom: 0.8em;
+  position: relative; /* Zorgt ervoor dat ik het ps4/ps5 logo op zn plaats krijg */
+}
+
+/* img cover van spel */
+.GameGallery ul li img:first-of-type {
+  max-width: 100%; /* Zorgt ervoor dat de afbeeldingen binnen het scherm passen */
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+/* P text onder elke img */
+.GameGallery ul li p {
+  padding: 0.3em;
+  margin: 0;
+  color: var(--White-Color);
+  font-family: var(--SST-font-family);
+  font-size: 0.7em;
+}
+
+/* PS4/PS5 Logo */
+.GameGallery ul li img:nth-of-type(2) {
+  max-width: 3.6em;
+  height: auto;
+  position: absolute;
+  bottom: 2.5em;
+  padding: 0.5em;
+}
+
+/* ps5 icon */
+.GameGallery ul li:nth-of-type(8) img:nth-of-type(2),
+.GameGallery ul li:nth-of-type(10) img:nth-of-type(2) {
+  max-width: 1.8em;
+}
+
+/******************************************************************/
+/* DEZE MAAND */ /* DEZE MAAND */ /* DEZE MAAND */ /* DEZE MAAND */
+/******************************************************************/
+
+.DezeMaand {
+  text-align: center;
+  background-color: var(--purple-Color);
+  color: var(--White-Color);
+}
+
+.DezeMaand h2:first-child {
+  display: none;
+}
+
+/* Soccer img */
+.DezeMaand article img {
+  width: 100%;
+  margin-top: 0;
+}
+
+/* Soccer img + gradient */
+.DezeMaand article {
+  width: 100%;
+  position: relative;
+}
+
+/* gradient */
+.DezeMaand .gradient {
+  background: linear-gradient(transparent, var(--purple-Color));
+  width: 100%;
+  height: 5em;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Kop boven */
+.DezeMaand h2 {
+  font-family: var(--SSTUltralight-font-family);
+  text-transform: uppercase;
+  font-size: 2em;
+  margin: 0;
+  letter-spacing: var(--letterspace-letter-spacing);
+  padding-left: 0;
+}
+
+/* Kop onder */
+.DezeMaand h2 span {
+  font-family: var(--SSTMedium-font-family);
+}
+
+/* Text */
+.DezeMaand p {
+  font-family: var(--SSTLight-font-family);
+  color: var(--Grey-Color);
+  font-size: 3.7vw;
+  padding: 0 1em;
+  line-height: var(--LineHeight-line-height);
+}
+
+/* button */
+.DezeMaand a:hover {
+	outline: 2px solid var(--White-Color);
+}
+
+/* 3 op een rij */
+.DezeMaand ul {
+  list-style: none;
+  padding: 1.5em;
+  margin: 0;
+}
+
+/* onderkant elke li */
+.DezeMaand ul li {
+  margin-bottom: 3em;
+}
+
+/* img li */
+.DezeMaand ul img {
+  width: 100%;
+  border-radius: var(--BigImg-border-radius);
+  transition: 0.5s ease;
+  box-shadow: -2px 5px 5px 2px rgba(0, 0, 0, 0.2),
+    2px -5px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.DezeMaand ul img:hover {
+  transform: scale(1.02);
+  box-shadow: -4px 2px 2px 1px rgba(0, 0, 0, 0.2),
+    4px -2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Tekst onder img */
+.DezeMaand h3 {
+  font-size: 1.35em;
+  letter-spacing: 0.02em;
+  font-family: var(--SSTLight-font-family);
+}
+
+/******************************************************************/
+/* PS Share */ /* PS Share */ /* PS Share */ /* PS Share */ /* PS Share */
+/******************************************************************/
+
+
+
+.PSshare {
+  background-color: var(--lightWhite-Color);
+  text-align: center;
+  overflow-x: hidden;
+  align-content: center;
+  
+  display: grid;
+  grid-template-rows: max-content max-content max-content;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Titel */
+.PSshare h2 {
+  font-family: var(--SSTUltralight-font-family);
+  font-size: 2.1em;
+  
+  margin: 0;
+  padding-top: 1.5em;
+  padding-left: 0;
+
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  color: var(--Black-Color);
+}
+
+/* SMALL TEXT*/
+.PSshare p {
+  font-family: var(--SSTLight-font-family);
+  font-size: 1.2em;
+
+  color: var(--DarkGrey-Color);
+  line-height: var(--LineHeight-line-height);
+  padding: 0 2em;
+  margin-bottom: 0;
+
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+/* Prev + Nxt buttons */
+.PSshare button {
+  width: 1.2em;
+  height: 3em;
+
+  background-color: transparent;
+  align-self: center;
+
+  /* background: transparent; */
+  border: none;
+  padding: 0;
+  grid-row-start: 3;
+
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center;
+}
+
+/* Nxt button */
+.PSshare button:nth-of-type(1) {
+  justify-self: end;
+  margin-right: 0.8em;
+
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column: 3;
+}
+
+/* Prev button */
+.PSshare button:nth-of-type(2) {
+  transform: scaleX(-1); /* spiegel horizontaal */
+  margin-left: 0.8em;
+
+  grid-column-start: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column: 1;
+}
+
+/* UL imgs */
+.PSshare ul {
+  display: flex;
+  overflow-x: hidden; /* niet meer handmatig scrollen anders auto */
+  scroll-snap-type: x mandatory;
+  list-style-type: none;
+
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+/* list imgs */
+.PSshare ul li {
+  padding: 3em;
+  scroll-snap-align: start;
+}
+
+.PSshare ul li img {
+  object-fit: cover;
+  height: auto;
+  max-width: calc(100vw - 6em);
+}
+
+/******************************************************************/
+/* PLAYSTATION STORE */ /* PLAYSTATION STORE */ /* PLAYSTATION STORE */
+/******************************************************************/
+
+.PlaystationStore {
+  margin-bottom: 1.5em;
+  padding: var(--SideSpace-padding);
+  background-color: var(--White-Color);
+}
+
+.PlaystationStore > h2 {
+  display: none;
+}
+
+/* PINK SALE IMG */
+.PlaystationStore a:first-of-type img:first-of-type {
+  width: 100%;
+  border-radius: var(--BigImg-border-radius);
+  box-shadow: -2px 2px 2px 1px var(--DarkWhite-Color), /* links */
+    2px -2px 2px 1px var(--DarkWhite-Color); /* rechts */
+  transition: 0.2s ease;
+}
+
+.PlaystationStore a:first-of-type img:first-of-type:hover {
+  transform: scale(1.02);
+  border-radius: var(--BigImg-border-radius);
+  box-shadow: -4px 2px 10px 1px var(--DarkWhite-Color),
+    4px -2px 10px 1px var(--DarkWhite-Color);
+}
+
+/* ps store img + h2 + p + button */
+.PlaystationStore article {
+  padding-left: 2em;
+}
+
+/* PS Store Img */
+.PlaystationStore article img {
+  width: 15em;
+}
+
+/* Tekst Nieuwe Kortingen...*/
+.PlaystationStore article h2 {
+  font-family: var(--SSTUltralight-font-family);
+  font-size: var(--h2-font-size);
+  margin: 0;
+  padding: 0;
+  color: var(--Black-Color);
+}
+
+/* SMALL TEXT*/
+.PlaystationStore article p {
+  font-family: var(--SST-font-family);
+  padding: 0;
+  font-size: var(--MiniP-font-size);
+  color: var(--DarkGrey-Color);
+  line-height: var(--LineHeight-line-height);
+
+  margin-bottom: 3em;
+}
+
+/* BUTTON NAAR ALLE DEALS */
+.PlaystationStore article a {
+  background-color: var(--Orange-Color);
+  color: white;
+  outline: none;
+}
+
+.PlaystationStore article a:hover {
+  outline: 2px solid var(--DarkOrange-Color);
+  background-color: var(--DarkOrange-Color);
+}
+
+/******************************************************************/
+/* CLOTHING */ /* CLOTHING */ /* CLOTHING */ /* CLOTHING */ /* CLOTHING */
+/******************************************************************/
+
+/* Hele section */
+.Clothing {
+  background-image: url("../images/Clothing/clothingBG2.png");
+  padding-bottom: 2em;
+  background-repeat: no-repeat;
+  background-size: 284%;
+  background-position: right;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Clothing > h2 {
+  display: none;
+}
+
+/* img + h2 + p*/
+.Clothing article {
+  margin-left: 2em;
+  display: grid;
+  grid-template-rows: auto;
+}
+
+/* Blauw icon*/
+.Clothing article > img {
+  width: 7em;
+  grid-row-start: 1;
+  margin-top: 3em;
+}
+
+/* Officiële gelicentieerde... */
+.Clothing article h2 {
+  font-family: var(--SSTUltralight-font-family);
+  font-size: var(--h2-font-size);
+  color: white;
+}
+
+/* Bekijk... */
+.Clothing article p {
+  font-family: var(--SST-font-family);
+  font-size: var(--MiniP-font-size);
+  color: var(--DarkGrey-Color);
+  line-height: var(--LineHeight-line-height);
+}
+
+/* List with 4x clothing */
+.Clothing ul {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: calc(100% - 3em);
+}
+
+/* 1x clothing with p+button */
+.Clothing ul li {
+  background-color: var(--Black-Color);
+  display: grid;
+  grid-template-rows: auto auto auto;
+  margin: 3em 0;
+  place-items: center;
+}
+
+/* 1ste list-item //////////////////////////////////////////////////// */
+
+/* 1ste list-item: transparantie achtergrond vest */
+.Clothing ul li:first-of-type {
+  background-color: var(--blackopacity);
+}
+
+/* 1ste list-item: Background button */
+.Clothing ul li:first-of-type div {
+  position: relative;
+  background-color: var(--Black-Color);
+  width: 100%;
+  top: 0;
+}
+
+/* 1ste list-item: Background p */
+.Clothing ul li:first-of-type p {
+  background-color: var(--Black-Color);
+  width: 100%;
+  margin: 0;
+  padding-top: 2em;
+}
+
+/* list-items //////////////////////////////////////////////////// */
+
+/* list img */
+.Clothing ul li img {
+  width: 26em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* 1x clothing text li*/
+.Clothing ul li p {
+  font-size: var(--MiniP-font-size);
+  font-family: var(--SST-font-family);
+  color: var(--White-Color);
+
+  grid-row-start: 2;
+  padding: 1em 0;
+}
+
+/* button shop nu */
+.Clothing ul li a,
+.Clothing > a {
+  background-color: var(--Orange-Color);
+  color: white;
+  outline: 2px solid var(--Black-Color); /* Voegt wat ruimte tussen de a en de border toe */
+}
+
+.Clothing ul li a:hover {
+  outline: 2px solid var(--DarkOrange-Color);
+  background-color: var(--DarkOrange-Color);
+}
+
+/* Laatste button */
+.Clothing > a {
+  justify-content: center;
+  width: 9em;
+  background-color: var(--White-Color);
+  color: var(--Black-Color);
+  text-align: center;
+}
+
+/******************************************************************/
+/* SOCIAL MEDIA */ /* SOCIAL MEDIA */ /* SOCIAL MEDIA */ /* SOCIAL MEDIA */
+/******************************************************************/
+
+/* Volg ons.. */
+.SocialMedia {
+  margin: 3em;
+}
+
+.SocialMedia h2 {
+  font-family: var(--SSTUltralight-font-family);
+  font-size: var(--h2-font-size);
+
+  line-height: var(--LineHeight-line-height);
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 15em;
+  color: var(--Black-Color);
+}
+
+/* alle socials */
+.SocialMedia article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 1em;
+}
+
+/* alle socials los */
+.SocialMedia article img,
+.SocialMedia article object {
+  width: 9em;
+  transition: transform 0.3s;
+  margin-top: 2em;
+}
+
+.SocialMedia article img:nth-of-type(2) {
+  height: 9.5em;
+}
+
+.SocialMedia article img:hover {
+  transform: scale(1.04);
+}
+
+/******************************************************************/
+/* Footer */ /* Footer */ /* Footer */ /* Footer */ /* Footer */
+/******************************************************************/
+
+footer {
+  background-color: var(--darkblue-Color);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+footer h2 {
+  display: none;
+}
+
+/* Playstation Logo */
+footer > img:first-of-type {
+  padding: var(--SideSpace-padding);
+  width: 15em;
+}
+
+footer button:nth-of-type(1),
+footer button:nth-of-type(2),
+footer button:nth-of-type(3),
+footer button:nth-of-type(4) {
+  width: 90vw;
+  padding: 0;
+
+  justify-content: space-between;
+  align-self: center;
+  display: flex;
+
+  background-color: transparent;
+  border: none;
+  font-family: var(--SSTMedium-font-family);
+  color: white;
+  cursor: pointer;
+}
+
+/* 1ste button */
+footer button:first-of-type {
+  border-top: solid 0.06em rgba(222, 216, 216, 0.5);
+  padding-top: 0.8em;
+}
+
+/* Cross icon */
+footer button:nth-of-type(1) img,
+footer button:nth-of-type(2) img,
+footer button:nth-of-type(3) img,
+footer button:nth-of-type(4) img {
+  width: 0.8em;
+  /* transform: rotate(45deg); */
+  align-items: center;
+  align-self: center;
+  transform: rotate(45deg);
+}
+
+/* balken dicht */
+footer article {
+  border-bottom: solid 0.06em rgba(222, 216, 216, 0.5);
+  margin: 0.8em 0;
+}
+
+/* koppen */
+footer article:nth-of-type(1),
+footer article:nth-of-type(2),
+footer article:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin-left: 5vw;
+  gap: 0.7em;
+}
+
+/* linkjes tekst */
+footer article a {
+  font-family: var(--SSTLight-font-family);
+  font-weight: 700;
+  font-size: 0.7em;
+  color: white;
+  text-decoration: none;
+  width: auto;
+}
+
+/* Ruimte onder elk laatste mini-kopje*/
+footer article a:last-child {
+  margin-bottom: 1.6em;
+}
+
+/* Verbinding maken*/
+footer article:nth-of-type(4) {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 2.5em 2.5em 2.5em 2.5em;
+  grid-template-rows: max-content max-content auto;
+  place-self: center;
+  row-gap: 0.7em;
+}
+
+/* social media icons a */
+footer article:nth-of-type(4) a {
+  place-self: center;
+  justify-self: start;
+}
+
+/* social media icons */
+footer article:nth-of-type(4) a img {
+  width: 1.7em;
+  margin: 0;
+  padding: 0;
+  grid-row: 1;
+}
+
+/* Verbinding maken kopje 1*/
+footer article a:nth-of-type(5) {
+  grid-row: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* Verbinding maken kopje 2*/
+footer article a:nth-of-type(6) {
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+footer img:nth-of-type(2) {
+  width: 12em;
+  margin-left: 5vw;
+}
+
+footer > p,
+footer p {
+  width: 75%;
+  color: white;
+  font-size: 0.75em;
+  font-family: var(--SSTLight-font-family);
+  line-height: 1.5em;
+  margin-left: 5vw;
+}
+
+footer p a {
+  font-size: 1em;
+  color: white;
+}
+
+footer nav {
+  border-top: solid 0.06em rgba(222, 216, 216, 0.5);
+  width: 90vw;
+  padding-left: 5vw;
+}
+
+footer nav button {
+  padding-top: 2em !important;
+  width: 5em !important;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1em !important;
+  font-family: var(--SSTLight-font-family) !important;
+  color: white !important;
+}
+
+footer nav button img:first-of-type {
+  width: 1.2em;
+  transform: rotate(0deg) !important;
+}
+
+footer nav button img:nth-of-type(2) {
+  transform: rotate(0deg);
+  width: 0.6em;
+  margin: 0;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  gap: 0.5em;
+  text-decoration: none;
+}
+
+footer nav ul li a {
+  color: white;
+  font-size: 0.8em;
+  text-decoration: none;
+  font-family: var(--SSTLight-font-family);
+}
+
+footer img:nth-of-type(3) {
+  width: 4.5em;
+  background-color: black;
+  padding: 0.7em 0;
+  padding-left: calc(100% - 5em);
+  padding-right: 2em;
+  height: auto;
+  margin-top: 1em;
+}
+
+footer button:nth-of-type(1) img.active,
+footer button:nth-of-type(2) img.active,
+footer button:nth-of-type(3) img.active,
+footer button:nth-of-type(4) img.active {
+  transform: rotate(0deg);
+}
+
+footer article {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+footer .active + article {
+  max-height: 999em;
+  overflow: visible;
+}
