@@ -30,6 +30,7 @@
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina
+  - klik erop dan werkt het
   <img src="readme-images/screenshot-small-screen.pdf" width="375px" alt="Small screenshot van de homepagina van de officiële Playstation website">
  
 </details>
@@ -46,7 +47,7 @@
   <img src="readme-images/WCAG/2.jpg" width="375px" alt="Pagina 2 WCAG Checklist">
   <img src="readme-images/WCAG/3.jpg" width="375px" alt="Pagina 3 WCAG Checklist">
   <img src="readme-images/WCAG/4.jpg" width="375px" alt="Pagina 4 WCAG Checklist">
-  <img src="readme-images/WCAG/5.jpg" width="375px" alt="Pagina 5 WCAG Checklist">
+  <img src="readme-images/WCAG/5.png" width="375px" alt="Pagina 5 WCAG Checklist">
   Lijst met bevindingen die in de screenreader test naar voren kwamen:
   - Content laad te snel bij startscherm slider: waardoor de Voice over nog niet klaar is met praten en dus niet uit kan praten omdat de volgende afbeelding met alt tekst al weer tevoorschijn komt. 
   - Alle letters gaan ook los door de screenreader en niet de woorden in het geheel. Dus eerst los en dan pas als geheel.
