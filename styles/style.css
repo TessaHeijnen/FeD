@@ -23,7 +23,7 @@ body {
 
 @font-face {
   font-family: "SSTMedium";
-  src: url(../fonts/SSTMedium.ttf);
+  src: url(../fonts/SSSTMedium.ttf);
 }
 
 /******************************************************************/
@@ -235,7 +235,7 @@ header button:nth-of-type(4) {
   left: 0.3em;
 }
 
-/* Streepjes krijgen width dus klappen in */
+/* Streepjes krijgen width:0 dus klappen in */
 #sun.night span {
   width: 0;
 }
